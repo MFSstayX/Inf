@@ -10,4 +10,6 @@ public class Girokonto extends Konto{
     public void setDispo(int dispo) {
         this.dispo = dispo;
     }
+    
+
 }

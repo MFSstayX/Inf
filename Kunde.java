@@ -24,4 +24,23 @@ public class Kunde {
     public void setVorname(String vorname) {
         this.vorname = vorname; 
     }
+    public String getAnschrift() {
+        return anschrift; 
+    }
+    public void setAnschrift(String anschrift) {
+        this.anschrift = anschrift;
+    }
+    public int getKundennummer() {
+        return kundennummer;
+    }
+    public void setKundennummer(int kundennummer) {
+        this.kundennummer = kundennummer;
+    }
+    public int getPIN() {
+        return PIN; 
+    }
+    public void setPIN(int PIN) {
+        this.PIN = PIN;
+    }
+
 }
