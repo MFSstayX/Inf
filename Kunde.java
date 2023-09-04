@@ -54,7 +54,6 @@ public class Kunde {
     public void setBank(Bank bank) {
         this.bank = bank;
     }
-
     public void einzahlen(int betrag, int kontonr){
 
     }
