@@ -1,9 +1,11 @@
 public class Konto {
     private int kontonr; 
     private int saldo; 
-    public Konto(int kontonr, int saldo) {
+    private Kunde inhaber;
+    public Konto(int kontonr, int saldo, Kunde inhaber) {
         this.kontonr = kontonr; 
         this.saldo = saldo;
+        this.inhaber = inhaber;
     }
     public int getKontonr() {
         return kontonr; 

@@ -3,14 +3,14 @@ public class Kunde {
     private String vorname; 
     private String anschrift; 
     private int kundennummer; 
-    private int PIN; 
+    private int geburtsdatum; 
 
-    public Kunde(String name, String vorname, String anschrift, int kundenummer, int PIN) {
+    public Kunde(String name, String vorname, String anschrift, int kundenummer, int geburtsdatum {
         this.name = name; 
         this.vorname = vorname; 
         this.anschrift = anschrift; 
-        this.kundennummer = kundenummer; 
-        this.PIN = PIN; 
+        this.geburtsdatum = geburtsdatum;
+
     }
     public String getName() {
         return name; 
@@ -36,11 +36,18 @@ public class Kunde {
     public void setKundennummer(int kundennummer) {
         this.kundennummer = kundennummer;
     }
-    public int getPIN() {
-        return PIN; 
+    public void einzahlen(int betrag, int kontonr){
+
     }
-    public void setPIN(int PIN) {
-        this.PIN = PIN;
+    public void auszahlen(int betrag, int kontonr){
+
     }
+    public void abheben(int betrag, int kontonr, int pin){
+
+    }
+    public void überweisen(int betrag, int kontonrEingang, int kontonrAusgang ){
+        
+    }
+
 
 }
