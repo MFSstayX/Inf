@@ -5,14 +5,14 @@ public class Kunde {
     private String anschrift; 
     private int kundennummer; 
     private int geburtsdatum;
-    private Bank bank;
 
-    public Kunde(String name, String vorname, String anschrift, int kundenummer, int geburtsdatum, Bank bank) {
+
+    public Kunde(String name, String vorname, String anschrift, int kundenummer, int geburtsdatum) {
         this.name = name; 
         this.vorname = vorname; 
         this.anschrift = anschrift; 
         this.geburtsdatum = geburtsdatum;
-        this.bank = bank;
+
 
     }
 
@@ -47,13 +47,7 @@ public class Kunde {
         this.geburtsdatum = geburtsdatum;
     }
 
-    public Bank getBank() {
-        return this.bank;
-    }
-
-    public void setBank(Bank bank) {
-        this.bank = bank;
-    }
+    
     public void einzahlen(int betrag, int kontonr){
         
     }
