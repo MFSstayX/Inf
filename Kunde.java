@@ -5,15 +5,30 @@ public class Kunde {
     private String anschrift; 
     private int kundennummer; 
     private int geburtsdatum;
-
+    private Girokonto girokonto;
+    private Sparkonto sparkonto;
 
     public Kunde(String name, String vorname, String anschrift, int kundenummer, int geburtsdatum) {
         this.name = name; 
         this.vorname = vorname; 
         this.anschrift = anschrift; 
         this.geburtsdatum = geburtsdatum;
+        this.girokonto = null; 
+        this.sparkonto = null; 
 
 
+    }
+    public Girokonto getGirokonto() {
+        return this.girokonto;
+    }
+    public void setGirokonto(Girokonto girokonto) {
+        this.girokonto = girokonto;
+    }
+    public Sparkonto getSparkonto() {
+        return this.sparkonto;
+    }
+    public void setSparkonto(Sparkonto sparkonto) {
+        this.sparkonto = sparkonto;
     }
 
     public String getName() {
