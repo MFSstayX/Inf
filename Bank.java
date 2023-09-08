@@ -14,13 +14,10 @@ public class Bank {
         kunden[anzahlKunden] = new Kunde(name, vorname, anschrift, kundennummer, geburtsdatum);
         this.anzahlKunden += 1;
     }
-     public void neuesKonto(int saldo) {
+     public void neuesKonto(int saldo, Kunde inhaber) {
         int kontonr = anzahlKonten += 1000; 
         kontos[anzahlKonten] = new Konto(kontonr,  saldo, null);
         this.anzahlKonten += 1;
-    }
-    public void neuesKonto(String art) {
-        
     }
     // Hier müssen einzahlen, auzahlen und überweisen als Methode hin + neue kunden und neue Konten
 }
