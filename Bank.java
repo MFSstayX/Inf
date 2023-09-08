@@ -39,9 +39,9 @@ public class Bank {
         kunden[anzahlKunden] = new Kunde(name, vorname, anschrift, kundennummer, geburtsdatum);
         this.anzahlKunden += 1;
     }
-    
+
     public void einzahlen(int betrag, int kontonummer) {
-        int geld; 
+        int geld = 0; 
         for (int i = 0; i<= konten.length; i++){
                     if (konten[i].getKontonr() == kontonummer){
                         geld = konten[i].getSaldo();
@@ -51,7 +51,7 @@ public class Bank {
     }
 }
     public void auszahlen(int betrag, int kontonummer) {
-        int geld; 
+        int geld = 0; 
         for (int i = 0; i<= konten.length; i++){
                     if (konten[i].getKontonr() == kontonummer){
                         geld = konten[i].getSaldo();
