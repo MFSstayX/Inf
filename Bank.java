@@ -39,9 +39,24 @@ public class Bank {
         kunden[anzahlKunden] = new Kunde(name, vorname, anschrift, kundennummer, geburtsdatum);
         this.anzahlKunden += 1;
     }
-     public void neuesKonto(char art, int saldo, Kunde inhaber) {
-        int kontonr = anzahlKonten += 1000; 
-        konten[anzahlKonten] = new Konto(kontonr,  saldo, null);
-        this.anzahlKonten += 1;
+     public void neuesKonto(char art, int kundennummer) {
+        boolean gefunden = false; 
+        for( int i = 0; i <= kunden.length; i++) {
+            if(kunden[i].getKundennummer() == kundennummer) {
+                gefunden = true; 
+                break;
+            } 
+        }
+        if(gefunden) {
+            if( art == 'g' ) {
+                int kontonr = kundennummer*100+1;
+                konten[anzahlKonten] = new Girokonto(0, kontonr, 0, null);
+            }else if( art == 's') {
+                int kontonr = kundennummer*100+1;
+                konten[anzahlKonten] = new Girokonto(0, kontonr, 0, null);
+            }
+        }
+
+
     }
 }
