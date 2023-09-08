@@ -62,6 +62,14 @@ public class Bank {
             }else if( art == 's') {
                 int kontonr = kundennummer*100+1;
                 konten[anzahlKonten] = new Sparkonto(0, kontonr, 0, null);
+                Kunde kunde = null;
+                for (int i = 0; i<= kunden.length; i++){
+                    if (kunden[i].getKundennummer() == kundennummer){
+                        kunde = kunden[i];
+                        break; 
+                    }
+                    kunde.setSparkonto(new Sparkonto(0, kontonr, 0, null));
+                }
             }
         }
 
