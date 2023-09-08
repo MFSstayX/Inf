@@ -53,7 +53,7 @@ public class Bank {
                 konten[anzahlKonten] = new Girokonto(0, kontonr, 0, null);
             }else if( art == 's') {
                 int kontonr = kundennummer*100+1;
-                konten[anzahlKonten] = new Girokonto(0, kontonr, 0, null);
+                konten[anzahlKonten] = new Sparkonto(0, kontonr, 0, null);
             }
         }
 
