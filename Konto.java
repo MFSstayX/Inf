@@ -1,4 +1,4 @@
-public class Konto {
+public abstract class Konto {
     private int kontonr; 
     private int saldo; 
     private Kunde inhaber;
