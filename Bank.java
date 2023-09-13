@@ -46,6 +46,7 @@ public class Bank {
                     if (konten[i].getKontonr() == kontonummer){
                         geld = konten[i].getSaldo();
                         geld += betrag; 
+                        konten[i].setSaldo(geld); 
                         break; 
                     }
     }
@@ -56,6 +57,7 @@ public class Bank {
                     if (konten[i].getKontonr() == kontonummer){
                         geld = konten[i].getSaldo();
                         geld -= betrag; 
+                        konten[i].setSaldo(geld); 
                         break; 
                     }
     }
