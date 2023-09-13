@@ -51,7 +51,7 @@ public class Bank {
     }
 }
     public void auszahlen(int betrag, int kontonummer) {
-        int geld = 0; 
+        int geld; 
         for (int i = 0; i<= konten.length; i++){
                     if (konten[i].getKontonr() == kontonummer){
                         geld = konten[i].getSaldo();
