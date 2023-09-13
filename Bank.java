@@ -62,6 +62,13 @@ public class Bank {
                     }
     }
 }
+    public void ueberweisen(int betrag, int kontonummerEmpfang, int KontonummerAuszahlen) {
+        int geld1 = 0;
+        int geld2 = 0; 
+        auszahlen(betrag, KontonummerAuszahlen);
+        
+    }
+
     
     public void neuesKonto(char art, int kundennummer) {
         boolean gefunden = false; 
