@@ -35,7 +35,7 @@ public class Bank {
         this.anzahlKonten = anzahlKonten;
     }
     public void neuerKunde(String name, String vorname, String anschrift, int geburtsdatum) {
-        int kundennummer = anzahlKunden += 1000; 
+        int kundennummer = anzahlKunden += 1000; // 1000, 1001, 1002, 1003
         kunden[anzahlKunden] = new Kunde(name, vorname, anschrift, kundennummer, geburtsdatum);
         this.anzahlKunden += 1;
     }
@@ -66,6 +66,7 @@ public class Bank {
         int geld1 = 0;
         int geld2 = 0; 
         auszahlen(betrag, KontonummerAuszahlen);
+        einzahlen(betrag, kontonummerEmpfang);
         
     }
 
@@ -81,8 +82,7 @@ public class Bank {
         if(gefunden) {
             if( art == 'g' ) {
                 int kontonr = kundennummer*100+1;
-                konten[anzahlKonten] = new Girokonto(0, kontonr, 0, null);
-                Kunde kunde = null;
+                Kunde kunde = null; 
                 for (int i = 0; i<= kunden.length; i++){
                     if (kunden[i].getKundennummer() == kundennummer){
                         kunde = kunden[i];
@@ -92,7 +92,6 @@ public class Bank {
                 kunde.setGirokonto(new Girokonto(0, kontonr, 0, null));
             }else if( art == 's') {
                 int kontonr = kundennummer*100+1;
-                konten[anzahlKonten] = new Sparkonto(0, kontonr, 0, null);
                 Kunde kunde = null;
                 for (int i = 0; i<= kunden.length; i++){
                     if (kunden[i].getKundennummer() == kundennummer){

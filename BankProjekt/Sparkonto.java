@@ -1,5 +1,6 @@
 public class Sparkonto extends Konto{
     private double zinssatz; 
+    
     public Sparkonto(double zinssatz, int kontonr, int saldo, Kunde inhaber){
         super(kontonr, saldo, inhaber);
         this.zinssatz = zinssatz;

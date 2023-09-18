@@ -1,7 +1,7 @@
 public abstract class Konto {
     private int kontonr; 
     private int saldo; 
-    private Kunde inhaber;
+    private Kunde inhaber; //Assoziation
     public Konto(int kontonr, int saldo, Kunde inhaber) {
         this.kontonr = kontonr; 
         this.saldo = saldo;
