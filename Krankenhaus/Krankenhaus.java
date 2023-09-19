@@ -13,13 +13,13 @@ public class Krankenhaus {
         if(pPatient.getIstPrivatversichert()) {
             abrechung = abrechnungssatzPrivatpatienten;
             pArzt.setBehandeltPrivatpatienten(true);
-            kosten = pBehandlungsdauer + abrechnungssatzPrivatpatienten; 
+
         }else {
             abrechung = abrechnugssatzKassenpatienten;
             pArzt.setBehandeltPrivatpatienten(false);
-            kosten = pBehandlungsdauer + abrechnugssatzKassenpatienten; 
         }
         pPatient.setBehandelnderArzt(pArzt); 
+        kosten = abrechung *pBehandlungsdauer;
         pPatient.setBisherigeRechnungssumme(kosten); 
 
     }
