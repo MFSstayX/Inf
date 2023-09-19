@@ -8,4 +8,7 @@ public class Arzt extends Personal{
         fachgebiet = pFachgebiet; 
         behandeltPrivatpatienten = pBehandeltPrivatpatienten; 
     }
+    public void setBehandeltPrivatpatienten(boolean x) {
+        behandeltPrivatpatienten = x; 
+    }
 }
