@@ -4,8 +4,9 @@ public class Node {
    
     public Node(Statist content) {
         this.content = content; 
+        next = null; 
     }
-    
+
      public Statist getContent() {
         return this.content;
     }
