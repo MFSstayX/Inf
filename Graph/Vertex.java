@@ -16,14 +16,15 @@
  */
 public class Vertex{
     //Einmalige ID des Knotens und Markierung
-    //EIGENER CODE
+    private String id; 
+    private boolean mark; 
     
     
     /**
     * Ein neues Objekt vom Typ Vertex wird erstellt. Seine Markierung hat den Wert false.
     */
     public Vertex(String pID){
-    //EIGENER CODE
+      this.id = pID;
     
     }
     
@@ -31,7 +32,7 @@ public class Vertex{
     * Die Anfrage liefert die ID des Knotens als String.
     */
     public String getID(){
-    //EIGENER CODE
+      return this.id;
     
     }
     
@@ -39,7 +40,7 @@ public class Vertex{
     * Der Auftrag setzt die Markierung des Knotens auf den Wert pMark.
     */
     public void setMark(boolean pMark){
-    //EIGENER CODE
+      this.mark = pMark; 
     
     }
     
@@ -47,7 +48,7 @@ public class Vertex{
     * Die Anfrage liefert true, wenn die Markierung des Knotens den Wert true hat, ansonsten false.
     */
     public boolean isMarked(){
-    //EIGENER CODE
+      return this.mark; 
     
     }
     

@@ -19,7 +19,8 @@
  * @version Oktober 2015
  */
 public class Graph{
-    //EIGENER CODE
+    private List<Vertex> vertices; 
+    private List<Edge> edges; 
     
   
     /**
@@ -28,7 +29,9 @@ public class Graph{
      */
     public Graph(){
       //Leere Listen fuer Knoten und Kanten erstellen.
-    //EIGENER CODE
+      this.vertices = new List<Vertex>(); 
+      this.edges = new List<Edge>(); 
+
     
     }
   
@@ -37,19 +40,31 @@ public class Graph{
      */
     public List<Vertex> getVertices(){
       //Eine neue Liste mit allen Vertex-Objekten erstellen.
-    //EIGENER CODE
+        List<Vertex> neu = new List<Vertex>(); 
+        vertices.toFirst();
+        while(this.vertices.hasAccess()){
+          neu.append(vertices.getContent()); 
+          vertices.next(); 
+        }
     
-      //Aktuelles Element zum Anfang bewegen.
-    //EIGENER CODE
+      //Aktuelles Element zum Anf
+    neu.toFirst();
   
-    //EIGENER CODE
+    return neu; 
     }
   
     /**
      * Die Anfrage liefert eine neue Liste aller Kantenobjekte vom Typ List<Edge>.
      */
     public List<Edge> getEdges(){
-    //EIGENER CODE NICHT ERFORDERLICH
+      List<Edge> neu = new List<Edge>(); 
+      edges.toFirst();
+      while(this.edges.hasAccess()){
+        neu.append(edges.getContent()); 
+        edges.next(); 
+      }
+      neu.toFirst();
+      return neu; 
     
     }
   
@@ -59,10 +74,14 @@ public class Graph{
      */
     public Vertex getVertex(String pID){
       //Vertex-Objekt mit pID als ID suchen.
-        //EIGENER CODE
-        
-      //Objekt zurueckliefern.
-        //EIGENER CODE
+        vertices.toFirst();
+        while(vertices.hasAccess()){
+          if(vertices.getContent().getID().equals(pID)){
+            return vertices.getContent(); 
+          }
+          vertices.next();
+        }
+        return null; 
     }
   
     /**
@@ -157,7 +176,11 @@ public class Graph{
      * Der Auftrag setzt die Markierungen aller Knoten des Graphen auf pMark.
      */
     public void setAllVertexMarks(boolean pMark){
-        //EIGENER CODE
+        vertices.toFirst();
+        while(this.vertices.hasAccess()){
+          this.vertices.getContent().setMark(pMark);
+          this.vertices.next();
+        }
         
     }
   
